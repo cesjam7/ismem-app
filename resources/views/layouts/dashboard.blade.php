@@ -27,6 +27,9 @@
     <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/eventos.css') }}" rel="stylesheet">
+
+
 
 </head>
 
@@ -333,10 +336,10 @@
                           <div class="collapse menu-dropdown" id="sidebarEventos">
                             <ul class="nav nav-sm flex-column">
                               <li class="nav-item">
-                                <a href="#" class="nav-link"> Listado </a>
+                                <a href="{{ route('eventos.index') }}" class="nav-link"> Listado </a>
                               </li>
                               <li class="nav-item">
-                                <a href="#" class="nav-link"> Registrar </a>
+                                <a href="{{ route('eventos.create') }}" class="nav-link"> Registrar </a>
                               </li>
                             </ul>
                           </div>

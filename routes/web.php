@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EventosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/noticias', [App\Http\Controllers\NoticiasController::class, 'listado']);
 Route::get('/noticias/registrar', [App\Http\Controllers\NoticiasController::class, 'registrar']);
+
+Route::resource('eventos', EventosController::class);

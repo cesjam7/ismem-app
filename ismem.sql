@@ -22,6 +22,34 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `evento`
+--
+
+CREATE TABLE `evento` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(250) NOT NULL,
+  `descripcion` varchar(500) DEFAULT NULL,
+  `fecha_inicio` datetime NOT NULL,
+  `fecha_fin` datetime NOT NULL,
+  `ubicacion` varchar(150) NOT NULL,
+  `organizador` varchar(100) DEFAULT NULL,
+  `capacidad` int(11) DEFAULT NULL,
+  `estado` int(1) NOT NULL,
+  `imagen_url` longblob DEFAULT NULL,
+  `contacto_email` varchar(200) DEFAULT NULL,
+  `contacto_telefono` int(11) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+
+--
+-- Volcado de datos para la tabla `evento`
+--
+
+-- Luego de crear la tabla, importar el archivo datos_eventos.sql en la tabla `evento`
+
 
 --
 -- Estructura de tabla para la tabla `noticias`
