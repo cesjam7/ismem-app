@@ -131,4 +131,9 @@ class EventosController extends Controller
         return view('eventos.show', compact('evento'));
     }
 
+    
+    public function api_listado() {
+        $eventos = Evento::latest()->get();
+        return response()->json($eventos);
+    }
 }
