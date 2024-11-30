@@ -18,3 +18,4 @@ Route::get('/noticias', [App\Http\Controllers\NoticiasController::class, 'listad
 Route::get('/noticias/registrar', [App\Http\Controllers\NoticiasController::class, 'registrar']);
 
 Route::resource('eventos', EventosController::class);
+
